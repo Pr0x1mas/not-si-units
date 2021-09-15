@@ -59,7 +59,41 @@
                         newUnitEquivalent.innerText = (element.equivalent + " (" + element.equivalentUnit + ")").replaceAll("_", " ");
                         newUnitRatio.innerText = "1 : " + element.ratio;
 
-                        newUnitMeasurement.style.textTransform = "capitalize"; 
+                        newUnit.appendChild(newUnitMeasurement);
+                        newUnit.appendChild(newUnitSI);
+                        newUnit.appendChild(newUnitEquivalent);
+                        newUnit.appendChild(newUnitRatio);
+
+                        baseUnitList.appendChild(newUnit);
+                    }
+                });
+            }
+        }
+
+        function getUnits() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", 'https://raw.githack.com/Pr0x1mas/not-si-units/main/units.csv', false);
+            xmlhttp.send();
+            if (xmlhttp.status==200) {
+                result = xmlhttp.responseText;
+                baseUnits = csvToArray(result);
+
+                baseUnitList = document.getElementById("NamedTable");
+
+                baseUnits.forEach(element => {
+                    if(element.measurement) {
+                        console.log(element)
+                        newUnit = document.createElement("tr");
+
+                        newUnitMeasurement = document.createElement("td");
+                        newUnitSI = document.createElement("td");
+                        newUnitEquivalent = document.createElement("td");
+                        newUnitRatio = document.createElement("td");
+
+                        newUnitMeasurement.innerText = element.measurement.replaceAll("_", " ");
+                        newUnitSI.innerText = (element.si + " (" + element.siUnit + ")").replaceAll("_", " ");
+                        newUnitEquivalent.innerText = (element.equivalent + " (" + element.equivalentUnit + ")").replaceAll("_", " ");
+                        newUnitRatio.innerText = "1 : " + element.ratio;
 
                         newUnit.appendChild(newUnitMeasurement);
                         newUnit.appendChild(newUnitSI);

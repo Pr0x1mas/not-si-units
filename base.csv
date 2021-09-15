@@ -1,8 +1,8 @@
 measurement,si,siUnit,equivalent,equivalentUnit,ratio
-length,metre,m,banana_muffin,🧁,0.0508
-time,second,s,uncomfortable_pause,uₚ, 8.2
-amount_of_substance,mole,mole,aardvark,a,787.5
-electric_current,ampere,A,spoon,🥄,0.022
-temperature,degrees_kelvin,°K,rimmer,°🥣,338.15
-luminous_intensity,candela,cd,shiny,✨,0.75
-mass,kilogram,kg,pigeon,🕊️,0.46
+Length,metre,m,Banana_Muffin,🧁,0.0508
+Time,second,s,Uncomfortable_Pause,uₚ, 8.2
+Amount_of_Substance,Mole,mole,Aardvark,a,787.5
+Electric_Current,Ampere,A,Spoon,🥄,0.022
+Temperature,Degrees_Kelvin,°K,Rimmer,°🥣,338.15
+Luminous_Intensity,Candela,cd,Shiny,✨,0.75
+Mass,Kilogram,kg,Pigeon,🕊️,0.46
