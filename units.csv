@@ -4,4 +4,12 @@ Energy,Joule,J,Goureau,g
 Radians,Radian,rad,Cole,c
 Power,Watt,W,Magnus,M
 Volume,Litre,L,Carty,C
-Momentum,KgMS⁻¹,Perry,P
+Momentum,,KgMS⁻¹,Perry,P
+Pressure,Pascal,Pa,Freddie_Mercury,fₘ
+Voltage,Volt,V,Toaster,t
+Resistance,Ohm,Ω,Fork,🍴
+Frequency,Hertz,hz,Pain,Aa
+Charge,Coulomb,C,Stewart,S
+Radioactivity,Becquerel,Bq,Miss_Ross's_Room,Y6
+Absorbed_Dose,Gray,Gy,Uno(u)
+Equivalent_Dose,Sievert,H,Unix,U
