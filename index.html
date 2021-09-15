@@ -172,8 +172,14 @@
             border-width: 1px;
             border-radius: 6px;
             border-collapse: collapse;
-            overflow: scroll;
-            max-width: 100%;
+            display: block;
+            max-width: -moz-fit-content;
+            max-width: fit-content;
+            margin: 0 auto;
+            overflow-x: auto;
+            white-space: nowrap;
+            text-align: left;
+            position: relative;
 
         }
 
@@ -202,7 +208,7 @@
         }
     </style>
 
-    <body onload="getBaseUnits()">
+    <body onload="getBaseUnits();getUnits()">
         <header style="position: fixed; width: 100%;" class="Header">
             <div class="Header-item">
                 <span style="font-weight: bolder;">Not the SI Units</span>
@@ -250,43 +256,8 @@
                     <th>Measurement</th>
                     <th>SI Unit</th>
                     <th>Equivalent</th>
+                    <th>Ratio</th>
                 </tr>
-                <tr>
-                    <td>Force</td>
-                    <td>Newton (N)</td>
-                    <td>McGhee (mg)</td>
-                </tr>
-                <tr>
-                    <td>Energy</td>
-                    <td>Joule (J)</td>
-                    <td>Goureau (g)</td>
-                </tr>
-
-                <tr>
-                    <td>Radians</td>
-                    <td>Radian (rad)</td>
-                    <td>Cole (c)</td>
-                </tr>
-
-                <tr>
-                    <td>Power</td>
-                    <td>Watts (W)</td>
-                    <td>Magnus (M)</td>
-                </tr>
-
-                <tr>
-                    <td>Volume</td>
-                    <td>Litre (L)</td>
-                    <td>Carty (C)</td>
-                </tr>
-
-                <tr>
-                    <td>Momentum</td>
-                    <td>KgMS^-1</td>
-                    <td>Perry (P)</td>
-                </tr>
-
-
             </table>
 
 
