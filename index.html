@@ -177,10 +177,9 @@
             max-width: fit-content;
             margin: 0 auto;
             overflow-x: auto;
-            white-space: nowrap;
             text-align: left;
             position: relative;
-
+            margin-left: 0px;
         }
 
         th {
@@ -205,6 +204,10 @@
             border-right-color: var(--color-border-secondary);
             border-right-style: solid;
             border-right-width: 1px;
+        }
+        
+        td:last-child {
+            border-right: none;
         }
     </style>
 

@@ -1,10 +1,12 @@
 measurement,si,siUnit,equivalent,equivalentUnit
-Force,Newton,N,McGhee,mg
+Velocity,Metres per Second,ms⁻¹,Banana Muffins per Awkward Pause,🧁🕊️⁻¹,127/20500
+Acceleration,Metres per Second per Second,ms⁻²,Banana Muffins per Awkward Pause per Awkward Pause,🧁🕊️⁻²,127/168100
+Force,Newton,N,McGhee,mg,2921/805000
 Energy,Joule,J,Goureau,g
 Radians,Radian,rad,Cole,c
 Power,Watt,W,Magnus,M
 Volume,Litre,L,Carty,C
-Momentum,,KgMS⁻¹,Perry,P
+Momentum,Kilogram Metres per Second Squared,KgMS⁻¹,Perry,P
 Pressure,Pascal,Pa,Freddie_Mercury,fₘ
 Voltage,Volt,V,Toaster,t
 Resistance,Ohm,Ω,Fork,🍴
