@@ -1,17 +1,18 @@
-measurement,si,siUnit,equivalent,equivalentUnit, ratio
+measurement,si,siUnit,equivalent,equivalentUnit,ratio
 Velocity,Metres per Second,ms⁻¹,Banana Muffins per Awkward Pause,🧁🕊️⁻¹,127/20500
 Acceleration,Metres per Second per Second,ms⁻²,Banana Muffins per Awkward Pause per Awkward Pause,🧁🕊️⁻²,127/168100
-Force,Newton,N,McGhee,mg,2921/805000
-Energy,Joule,J,Goureau,g
-Radians,Radian,rad,Cole,c
-Power,Watt,W,Magnus,M
-Volume,Litre,L,Carty,C
-Momentum,Kilogram Metres per Second Squared,KgMS⁻¹,Perry,P
-Pressure,Pascal,Pa,Freddie_Mercury,fₘ
-Voltage,Volt,V,Toaster,t
-Resistance,Ohm,Ω,Fork,🍴
-Frequency,Hertz,hz,Pain,Aa
-Charge,Coulomb,C,Stewart,S
-Radioactivity,Becquerel,Bq,Miss_Ross's_Room,Y6
-Absorbed_Dose,Gray,Gy,Uno,U
-Equivalent_Dose,Sievert,H,Unix,U
+Force,Newton,N,McGhee,mg,2921/805000,0
+Energy,Joule,J,Goureau,g,0
+Radians,Radian,rad,Cole,c,0
+Power,Watt,W,Magnus,M,0
+Volume,Litre,L,Carty,C,0
+Momentum,Kilogram Metres per Second Squared,KgMS⁻¹,Perry,P,0
+Pressure,Pascal,Pa,Freddie_Mercury,fₘ,0
+Voltage,Volt,V,Britain,B,0
+Resistance,Ohm,Ω,Fork,🍴,0
+Frequency,Hertz,hz,Pain,Aa,0
+Charge,Coulomb,C,Stewart,S,0
+Radioactivity,Becquerel,Bq,Miss_Ross's_Room,Y6,0
+Absorbed_Dose,Gray,Gy,Uno,U,0
+Equivalent_Dose,Sievert,H,Unix,U,0
+Capacitance,Farad,F,Howard,H,0
