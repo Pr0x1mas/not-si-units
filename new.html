@@ -1,0 +1,72 @@
+---
+layout: default
+title: home
+---
+
+<h1 class="h1">Nacia Netradicia</h1>
+<h5 class="h5">By <a href="https://pr0x1mas.github.io">Pr0x1mas</a></h5>
+<br>
+<p>
+    Here is an alternative set of units designed to be a complete replacement for the SI units.
+    <br>
+    Nacia Netradicia is Esperanto for "national unconventional", intended to be the exact opposite of the translation of SI: "international standard".
+</p>
+<br>
+
+<div class="Subhead">
+    <div class="Subhead-heading">Base Units</div>
+</div>
+
+<input id="SISearch" onkeyup="searchSI()" class="form-control input-block" type="text" placeholder="Search SI Units" aria-label="Search SI Units" />
+
+<br>
+
+<table id="SITable">
+    <tr>
+        <th>Measurement</th>
+        <th>SI Base Unit</th>
+        <th>Equivalent</th>
+        <th>Ratio</th>
+    </tr>
+    {% for unit in site.units %}
+        {% if unit.base %}
+            <tr>
+                <td>{{unit.measurement}}</td>
+                <td>{{unit.si}} ({{unit.siUnit}})</td>
+                <td>{{unit.name}} ({{unit.unit}})</td>
+                <td>1 : {{unit.ratio}}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+
+</table>
+
+<br>
+
+<div class="Subhead">
+    <div class="Subhead-heading">Other Named Units</div>
+    <div class="Subhead-description">These units have been assigned specific names as opposed to being based on SI base units. They are in no particular order. Any unit not named here has no specific name and must be defined using SI base units, e.g 🧁/up. Their quantities remain the same and do not need converting.</div>
+</div>
+
+<input id="NamedSearch" onkeyup="searchNamed()" class="form-control input-block" type="text" placeholder="Search named units" aria-label="Search named units" />
+
+<br>
+
+<table id="NamedTable">
+    <tr>
+        <th>Measurement</th>
+        <th>SI Unit</th>
+        <th>Equivalent</th>
+        <th>Ratio</th>
+    </tr>
+    {% for unit in site.units %}
+        {% unless unit.base %}
+            <tr>
+                <td>{{unit.measurement}}</td>
+                <td>{{unit.si}} ({{unit.siUnit}})</td>
+                <td>{{unit.name}} ({{unit.unit}})</td>
+                <td>1 : {{unit.ratio}}</td>
+            </tr>
+        {% endunless %}
+    {% endfor %}
+</table>
