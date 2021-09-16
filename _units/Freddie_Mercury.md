@@ -6,6 +6,6 @@ si: Pascal
 siUnit: Pa
 name: Freddie Mercury
 unit: Fm
-urlName: Freddie_Mercury.md
+urlName: Freddie_Mercury
 ratio: undefined
 ---

@@ -33,7 +33,7 @@ title: home
             <tr>
                 <td>{{unit.measurement}}</td>
                 <td>{{unit.si}} ({{unit.siUnit}})</td>
-                <td><a href="{{site.baseurl}}{% link _units/{{unit.urlName}} %}">{{unit.name}} ({{unit.unit}})</a></td>
+                <td><a href="{{unit.urlName | relative_url}}">{{unit.name}} ({{unit.unit}})</a></td>
                 <td>1 : {{unit.ratio}}</td>
             </tr>
         {% endif %}
@@ -63,7 +63,7 @@ title: home
             <tr>
                 <td>{{unit.measurement}}</td>
                 <td>{{unit.si}} ({{unit.siUnit}})</td>
-                <td><a href="{{site.baseurl}}{% link _units/{{unit.urlName}}  %}">{{unit.name}} ({{unit.unit}})</a></td>
+                <td><a href="{{unit.urlName | relative_url}}">{{unit.name}} ({{unit.unit}})</a></td>
                 <td>1 : {{unit.ratio}}</td>
             </tr>
         {% endunless %}

@@ -6,6 +6,6 @@ si: Degrees Kelvin
 siUnit: °K
 name: Rimmer
 unit: °🥣
-urlName: Rimmer.md
+urlName: units/Rimmer
 ratio: 338.15
 ---

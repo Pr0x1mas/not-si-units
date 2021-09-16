@@ -6,6 +6,6 @@ si: Ampere
 siUnit: A
 name: Spoon
 unit: 🥄
-urlName: Spoon.md
+urlName: units/Spoon
 ratio: 0.022
 ---

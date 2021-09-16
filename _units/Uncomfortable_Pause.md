@@ -6,6 +6,6 @@ si: Second
 siUnit: s
 name: Uncomfortable Pause
 unit: uₚ
-urlName: Uncomfortable_Pause.md
+urlName: units/Uncomfortable_Pause
 ratio: 8.2
 ---

@@ -6,6 +6,6 @@ si: Mole
 siUnit: mole
 name: Aardvark
 unit: a
-urlName: Aardvark.md
+urlName: units/Aardvark
 ratio: 787.5
 ---

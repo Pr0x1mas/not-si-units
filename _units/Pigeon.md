@@ -6,6 +6,6 @@ si: Kilogram
 siUnit: kg
 name: Pigeon
 unit: 🕊️
-urlName: Pigeon.md
+urlName: units/Pigeon
 ratio: 0.46
 ---

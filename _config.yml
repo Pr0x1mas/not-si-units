@@ -2,3 +2,4 @@ collections:
   units:
     output: true
     permalink: /units/:path
+

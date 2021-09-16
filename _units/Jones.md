@@ -6,6 +6,6 @@ si: Coulomb
 siUnit: C
 name: Jones
 unit: J
-urlName: Jones.md
+urlName: Jones
 ratio: undefined
 ---

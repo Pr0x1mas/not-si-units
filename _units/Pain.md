@@ -6,6 +6,6 @@ si: Hertz
 siUnit: hz
 name: Pain
 unit: Aa
-urlName: Pain.md
+urlName: Pain
 ratio: undefined
 ---

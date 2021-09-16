@@ -6,6 +6,6 @@ si: Candela
 siUnit: cd
 name: Shiny
 unit: ✨
-urlName: Shiny.md
+urlName: units/Shiny
 ratio: 0.75
 ---

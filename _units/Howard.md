@@ -6,6 +6,6 @@ si: Farad
 siUnit: F
 name: Howard
 unit: H
-urlName: Howard.md
+urlName: Howard
 ratio: undefined
 ---
