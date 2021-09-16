@@ -13,6 +13,7 @@ with open('base.csv', encoding="utf8") as base:
             with open(newUnitFileName, "a", encoding="utf8") as newUnit:
                 newUnit.write("---\n")
                 newUnit.write("base: true" + "\n")
+                newUnit.write("layout: unit" + "\n")
                 newUnit.write("measurement: " + row[0].replace("_", " ") + "\n")
                 newUnit.write("si: " + row[1].replace("_", " ") + "\n")
                 newUnit.write("siUnit: " + row[2].replace("_", " ") + "\n")
@@ -33,6 +34,7 @@ with open('units.csv', encoding="utf8") as units:
         if not path.isfile(newUnitFileName):
             with open(newUnitFileName, "a", encoding="utf8") as newUnit:
                 newUnit.write("---\n")
+                newUnit.write("layout: unit" + "\n")
                 newUnit.write("base: false" + "\n")
                 newUnit.write("measurement: " + row[0].replace("_", " ") + "\n")
                 newUnit.write("si: " + row[1].replace("_", " ") + "\n")

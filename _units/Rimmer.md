@@ -1,5 +1,6 @@
 ---
 base: true
+layout: unit
 measurement: Temperature
 si: Degrees Kelvin
 siUnit: °K

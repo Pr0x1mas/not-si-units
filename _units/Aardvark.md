@@ -1,5 +1,6 @@
 ---
 base: true
+layout: unit
 measurement: Amount of Substance
 si: Mole
 siUnit: mole

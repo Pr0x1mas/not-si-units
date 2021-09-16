@@ -1,4 +1,5 @@
 ---
+layout: unit
 base: false
 measurement: Energy
 si: Joule

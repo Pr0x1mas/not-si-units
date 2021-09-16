@@ -1,5 +1,6 @@
 ---
 base: true
+layout: unit
 measurement: Time
 si: Second
 siUnit: s

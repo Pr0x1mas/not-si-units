@@ -1,4 +1,5 @@
 ---
+layout: unit
 base: false
 measurement: Temperature
 si: Degree Celcius

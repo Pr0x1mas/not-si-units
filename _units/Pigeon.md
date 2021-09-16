@@ -1,5 +1,6 @@
 ---
 base: true
+layout: unit
 measurement: Mass
 si: Kilogram
 siUnit: kg

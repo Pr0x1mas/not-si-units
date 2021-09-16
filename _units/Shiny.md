@@ -1,5 +1,6 @@
 ---
 base: true
+layout: unit
 measurement: Luminous Intensity
 si: Candela
 siUnit: cd
