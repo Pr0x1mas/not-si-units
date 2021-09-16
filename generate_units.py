@@ -19,6 +19,9 @@ with open('base.csv', encoding="utf8") as base:
                 newUnit.write("siUnit: " + row[2].replace("_", " ") + "\n")
                 newUnit.write("name: " + row[3].replace("_", " ") + "\n")
                 newUnit.write("unit: " + row[4].replace("_", " ") + "\n")
+
+                newUnit.write("urlName: " + row[3] + ".md\n")
+
                 newUnit.write("ratio: " + row[5].replace("_", " ") + "\n")
                 newUnit.write("---\n")
             newUnit.close()
@@ -41,6 +44,9 @@ with open('units.csv', encoding="utf8") as units:
                 newUnit.write("siUnit: " + row[2].replace("_", " ") + "\n")
                 newUnit.write("name: " + row[3].replace("_", " ") + "\n")
                 newUnit.write("unit: " + row[4].replace("_", " ") + "\n")
+
+                newUnit.write("urlName: " + row[3] + ".md\n")
+
                 newUnit.write("ratio: " + row[5].replace("_", " ") + "\n")
                 newUnit.write("---\n")
             newUnit.close()

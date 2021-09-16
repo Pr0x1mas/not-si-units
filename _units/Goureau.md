@@ -6,5 +6,6 @@ si: Joule
 siUnit: J
 name: Goureau
 unit: g
+urlName: Goureau.md
 ratio: undefined
 ---

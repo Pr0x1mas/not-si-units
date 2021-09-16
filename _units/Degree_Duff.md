@@ -6,5 +6,6 @@ si: Degree Celcius
 siUnit: °C
 name: Degree Duff
 unit: °D
+urlName: Degree_Duff.md
 ratio: undefined
 ---
