@@ -28,6 +28,16 @@ title: home
         <th>Equivalent</th>
         <th>Ratio</th>
     </tr>
+    {% for unit in site.units %}
+        {% if unit.base %}
+            <tr>
+                <td>{{unit.measurement}}</td>
+                <td>{{unit.si}} ({{unit.siUnit}})</td>
+                <td>{{unit.name}} ({{unit.unit}})</td>
+                <td>1 : {{unit.ratio}}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
 </table>
 
 <br>
@@ -48,6 +58,16 @@ title: home
         <th>Equivalent</th>
         <th>Ratio</th>
     </tr>
+    {% for unit in site.units %}
+        {% unless unit.base %}
+            <tr>
+                <td>{{unit.measurement}}</td>
+                <td>{{unit.si}} ({{unit.siUnit}})</td>
+                <td>{{unit.name}} ({{unit.unit}})</td>
+                <td>1 : {{unit.ratio}}</td>
+            </tr>
+        {% endunless %}
+    {% endfor %}
 </table>
 
 <script src="js/unitLoader.js"></script>

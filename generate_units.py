@@ -1,3 +1,5 @@
+# REGENERATES UNITS FROM CSV FILES, LIQUID REPLACES JS TO MAKE UNITS STATIC
+
 import csv
 from os import close, remove, path
 
