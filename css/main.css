@@ -42,3 +42,9 @@ td {
 td:last-child {
     border-right: none;
 }
+
+footer {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    padding: 16px;
+}
