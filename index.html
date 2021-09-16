@@ -1,277 +1,52 @@
-<html>
-    <head>
-        <link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
-        <title>Not the SI Units</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    </head>
-    
-    <script>
-        function csvToArray(str, delimiter = ",") { // https://sebhastian.com/javascript-csv-to-array/
-            // slice from start of text to the first \n index
-            // use split to create an array from string by delimiter
-            const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+---
+layout: default
+---
 
-            // slice from \n index + 1 to the end of the text
-            // use split to create an array of each csv value row
-            const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+<h1 class="h1">Nacia Netradicia</h1>
+<h5 class="h5">By <a href="https://pr0x1mas.github.io">Pr0x1mas</a></h5>
+<br>
+<p>
+    Here is an alternative set of units designed to be a complete replacement for the SI units.
+    <br>
+    Nacia Netradicia is Esperanto for "national unconventional", intended to be the exact opposite of the translation of SI: "international standard".
+</p>
+<br>
 
-            // Map the rows
-            // split values from each row into an array
-            // use headers.reduce to create an object
-            // object properties derived from headers:values
-            // the object passed as an element of the array
-            const arr = rows.map(function (row) {
-            const values = row.split(delimiter);
-            const el = headers.reduce(function (object, header, index) {
-                object[header] = values[index];
-                return object;
-            }, {});
-            return el;
-        });
+<div class="Subhead">
+    <div class="Subhead-heading">Base Units</div>
+</div>
 
-  // return the array
-  return arr;
-}
+<input id="SISearch" onkeyup="searchSI()" class="form-control input-block" type="text" placeholder="Search SI Units" aria-label="Search SI Units" />
 
+<br>
 
-        function getBaseUnits() {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", 'https://raw.githack.com/Pr0x1mas/not-si-units/main/base.csv', false);
-            xmlhttp.send();
-            if (xmlhttp.status==200) {
-                result = xmlhttp.responseText;
-                baseUnits = csvToArray(result);
+<table id="SITable">
+    <tr>
+        <th>Measurement</th>
+        <th>SI Base Unit</th>
+        <th>Equivalent</th>
+        <th>Ratio</th>
+    </tr>
+</table>
 
-                baseUnitList = document.getElementById("SITable");
+<br>
 
-                baseUnits.forEach(element => {
-                    if(element.measurement) {
-                        console.log(element)
-                        newUnit = document.createElement("tr");
+<div class="Subhead">
+    <div class="Subhead-heading">Other Named Units</div>
+    <div class="Subhead-description">These units have been assigned specific names as opposed to being based on SI base units. They are in no particular order. Any unit not named here has no specific name and must be defined using SI base units, e.g 🧁/up. Their quantities remain the same and do not need converting.</div>
+</div>
 
-                        newUnitMeasurement = document.createElement("td");
-                        newUnitSI = document.createElement("td");
-                        newUnitEquivalent = document.createElement("td");
-                        newUnitRatio = document.createElement("td");
+<input id="NamedSearch" onkeyup="searchNamed()" class="form-control input-block" type="text" placeholder="Search named units" aria-label="Search named units" />
 
-                        newUnitMeasurement.innerText = element.measurement.replaceAll("_", " ");
-                        newUnitSI.innerText = (element.si + " (" + element.siUnit + ")").replaceAll("_", " ");
-                        newUnitEquivalent.innerText = (element.equivalent + " (" + element.equivalentUnit + ")").replaceAll("_", " ");
-                        newUnitRatio.innerText = "1 : " + element.ratio;
+<br>
 
-                        newUnit.appendChild(newUnitMeasurement);
-                        newUnit.appendChild(newUnitSI);
-                        newUnit.appendChild(newUnitEquivalent);
-                        newUnit.appendChild(newUnitRatio);
+<table id="NamedTable">
+    <tr>
+        <th>Measurement</th>
+        <th>SI Unit</th>
+        <th>Equivalent</th>
+        <th>Ratio</th>
+    </tr>
+</table>
 
-                        baseUnitList.appendChild(newUnit);
-                    }
-                });
-            }
-        }
-
-        function getUnits() {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", 'https://raw.githack.com/Pr0x1mas/not-si-units/main/units.csv', false);
-            xmlhttp.send();
-            if (xmlhttp.status==200) {
-                result = xmlhttp.responseText;
-                baseUnits = csvToArray(result);
-
-                baseUnitList = document.getElementById("NamedTable");
-
-                baseUnits.forEach(element => {
-                    if(element.measurement) {
-                        console.log(element)
-                        newUnit = document.createElement("tr");
-
-                        newUnitMeasurement = document.createElement("td");
-                        newUnitSI = document.createElement("td");
-                        newUnitEquivalent = document.createElement("td");
-                        newUnitRatio = document.createElement("td");
-
-                        newUnitMeasurement.innerText = element.measurement.replaceAll("_", " ");
-                        newUnitSI.innerText = (element.si + " (" + element.siUnit + ")").replaceAll("_", " ");
-                        newUnitEquivalent.innerText = (element.equivalent + " (" + element.equivalentUnit + ")").replaceAll("_", " ");
-                        newUnitRatio.innerText = "1 : " + element.ratio;
-
-                        newUnit.appendChild(newUnitMeasurement);
-                        newUnit.appendChild(newUnitSI);
-                        newUnit.appendChild(newUnitEquivalent);
-                        newUnit.appendChild(newUnitRatio);
-
-                        baseUnitList.appendChild(newUnit);
-                    }
-                });
-            }
-        }
-
-        function searchSI(){ // https://www.w3schools.com/howto/howto_js_filter_table.asp, with changes by me
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("SISearch");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("SITable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td0 = tr[i].getElementsByTagName("td")[0];
-                td1 = tr[i].getElementsByTagName("td")[1];
-                td2 = tr[i].getElementsByTagName("td")[2];
-                if (td1) {
-                    txtValue0 = td0.textContent || td0.innerText;
-                    txtValue1 = td1.textContent || td1.innerText;
-                    txtValue2 = td2.textContent || td2.innerText;
-
-                    if ((txtValue0.toUpperCase().indexOf(filter) > -1) || (txtValue1.toUpperCase().indexOf(filter) > -1) || (txtValue2.toUpperCase().indexOf(filter) > -1)) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        function searchNamed(){ // https://www.w3schools.com/howto/howto_js_filter_table.asp, with changes by me
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("NamedSearch");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("NamedTable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td0 = tr[i].getElementsByTagName("td")[0];
-                td1 = tr[i].getElementsByTagName("td")[1];
-                td2 = tr[i].getElementsByTagName("td")[2];
-                if (td1) {
-                    txtValue0 = td0.textContent || td0.innerText;
-                    txtValue1 = td1.textContent || td1.innerText;
-                    txtValue2 = td2.textContent || td2.innerText;
-
-                    if ((txtValue0.toUpperCase().indexOf(filter) > -1) || (txtValue1.toUpperCase().indexOf(filter) > -1) || (txtValue2.toUpperCase().indexOf(filter) > -1)) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-        
-    </script>
-
-    <style>
-        body {
-            max-width: 100vw;
-        }
-
-        table {
-            background-color: var(--color-bg-primary);
-            border-color: var(--color-border-primary);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: 6px;
-            border-collapse: collapse;
-            display: block;
-            max-width: -moz-fit-content;
-            max-width: fit-content;
-            margin: 0 auto;
-            overflow-x: auto;
-            text-align: left;
-            position: relative;
-            margin-left: 0px;
-        }
-
-        th {
-            padding: 16px;
-            margin: -1px -1px 0;
-            background-color: var(--color-bg-tertiary);
-            border-color: var(--color-border-primary);
-            border-style: solid;
-            border-width: 1px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        td {
-            padding: 16px;
-            margin-top: -1px;
-            list-style-type: none;
-            border-top-color: var(--color-border-secondary);
-            border-top-style: solid;
-            border-top-width: 1px;
-
-            border-right-color: var(--color-border-secondary);
-            border-right-style: solid;
-            border-right-width: 1px;
-        }
-        
-        td:last-child {
-            border-right: none;
-        }
-    </style>
-
-    <body onload="getBaseUnits();getUnits()">
-        <header style="position: fixed; width: 100%;" class="Header">
-			<img height="32	" src="NNicon.png">
-            <div class="Header-item" class="Header-item">
-                <span style="font-weight: bolder;">Normo Nacia</span>
-            </div>
-        </header>
-
-        <div style="height: 53px;"></div>
-
-        <section class="p-6">
-            <h1 class="h1">Nacia Netradicia</h1>
-            <h5 class="h5">By <a href="https://pr0x1mas.github.io">Pr0x1mas</a></h5>
-            <br>
-            <p>
-				Here is an alternative set of units designed to be a complete replacement for the SI units.
-				<br>
-				Nacia Netradicia is Esperanto for "national unconventional", intended to be the exact opposite of the translation of SI: "international standard".
-			</p>
-            <br>
-
-            <div class="Subhead">
-                <div class="Subhead-heading">Base Units</div>
-            </div>
-
-            <input id="SISearch" onkeyup="searchSI()" class="form-control input-block" type="text" placeholder="Search SI Units" aria-label="Search SI Units" />
-
-            <br>
-
-            <table id="SITable">
-                <tr>
-                    <th>Measurement</th>
-                    <th>SI Base Unit</th>
-                    <th>Equivalent</th>
-                    <th>Ratio</th>
-                </tr>
-            </table>
-
-            <br>
-
-            <div class="Subhead">
-                <div class="Subhead-heading">Other Named Units</div>
-                <div class="Subhead-description">These units have been assigned specific names as opposed to being based on SI base units. They are in no particular order. Any unit not named here has no specific name and must be defined using SI base units, e.g 🧁/up. Their quantities remain the same and do not need converting.</div>
-            </div>
-
-            <input id="NamedSearch" onkeyup="searchNamed()" class="form-control input-block" type="text" placeholder="Search named units" aria-label="Search named units" />
-
-            <br>
-
-            <table id="NamedTable">
-                <tr>
-                    <th>Measurement</th>
-                    <th>SI Unit</th>
-                    <th>Equivalent</th>
-                    <th>Ratio</th>
-                </tr>
-            </table>
-
-
-        </section>
-
-    </body>
-
-</html>
+<script src="js/unitLoader.js"></script>
