@@ -13,3 +13,6 @@ My original idea was to break into France and pull the ol' switcheroo Indiana Jo
 
 ## How it works
 Each base unit has a ratio which shows how it can be converted from SI, e.g Uncomfortable Pause, a unit of time, has a ratio of 1:8.2, meaning 1 uncomfortable pause is 8.2 seconds. All other unit's conversion ratios are then derived from these ratios and base units.
+
+## Why the name?
+Nacia Netradicia is Esperanto for "national unconventional", intended to be the exact opposite of the translation of SI: "international standard".
