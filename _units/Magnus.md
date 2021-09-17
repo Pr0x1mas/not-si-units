@@ -6,6 +6,6 @@ si: Watt
 siUnit: W
 name: Magnus
 unit: M
-urlName: Magnus
+urlName: units/Magnus
 ratio: undefined
 ---
