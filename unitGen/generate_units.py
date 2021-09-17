@@ -1,16 +1,18 @@
 # REGENERATES UNITS FROM CSV FILES, LIQUID REPLACES JS TO MAKE UNITS STATIC
 
 import csv
-from os import close, remove, path
+import os
 
-with open('base.csv', encoding="utf8") as base:
+print(os.getcwd())
+
+with open('unitGen/base.csv', encoding="utf8") as base:
     baseReader = csv.reader(base, delimiter=",")
     for row in baseReader:
         row += ['undefined'] * (6 - len(row))
         print(row)
         newUnitFileName = "_units/" + row[3] + ".md"
-        if path.isfile(newUnitFileName):
-            remove(newUnitFileName)
+        if os.path.isfile(newUnitFileName):
+            os.remove(newUnitFileName)
         
         with open(newUnitFileName, "a", encoding="utf8") as newUnit:
             newUnit.write("---\n")
@@ -30,13 +32,13 @@ with open('base.csv', encoding="utf8") as base:
 
 base.close()
 
-with open('units.csv', encoding="utf8") as units:
+with open('unitGen/units.csv', encoding="utf8") as units:
     unitsReader = csv.reader(units, delimiter=",")
     for row in unitsReader:
         row += ['undefined'] * (6 - len(row))
         print(row)
         newUnitFileName = "_units/" + row[3] + ".md"
-        if not path.isfile(newUnitFileName):
+        if not os.path.isfile(newUnitFileName):
             with open(newUnitFileName, "a", encoding="utf8") as newUnit:
                 newUnit.write("---\n")
                 newUnit.write("layout: unit" + "\n")
@@ -54,4 +56,4 @@ with open('units.csv', encoding="utf8") as units:
             newUnit.close()
 
 units.close()
-remove("_units/equivalent.md")
+os.remove("_units/equivalent.md")

@@ -1,7 +1,7 @@
 ---
 layout: unit
 base: false
-measurement: Radians
+measurement: Angle
 si: Radian
 siUnit: rad
 name: Cole

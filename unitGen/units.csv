@@ -1,6 +1,6 @@
 measurement,si,siUnit,equivalent,equivalentUnit,ratio
-Radians,Radian,rad,Cole,c
-Steradians,Steradian,sr
+Angle,Radian,rad,Cole,c
+Solid_Angle_Measure,Steradian,sr,Coleslaw,cs
 Frequency,Hertz,hz,Pain,Aa
 Force,Newton,N,McGhee,mg,2921/805000
 Pressure,Pascal,Pa,Freddie_Mercury,Fm
