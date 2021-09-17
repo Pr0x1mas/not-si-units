@@ -6,6 +6,6 @@ si: Radian
 siUnit: rad
 name: Cole
 unit: c
-urlName: Cole
+urlName: units/Cole
 ratio: undefined
 ---
