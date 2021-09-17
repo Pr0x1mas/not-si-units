@@ -6,6 +6,6 @@ si: Litre
 siUnit: L
 name: Carty
 unit: C
-urlName: Carty
+urlName: units/Carty
 ratio: undefined
 ---
