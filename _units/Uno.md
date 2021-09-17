@@ -6,6 +6,6 @@ si: Gray
 siUnit: Gy
 name: Uno
 unit: U
-urlName: Uno
+urlName: units/Uno
 ratio: undefined
 ---
