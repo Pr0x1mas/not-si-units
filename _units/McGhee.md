@@ -6,6 +6,6 @@ si: Newton
 siUnit: N
 name: McGhee
 unit: mg
-urlName: McGhee
+urlName: units/McGhee
 ratio: 2921/805000
 ---
