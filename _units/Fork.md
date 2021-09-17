@@ -6,6 +6,6 @@ si: Ohm
 siUnit: Ω
 name: Fork
 unit: 🍴
-urlName: Fork
+urlName: units/Fork
 ratio: undefined
 ---
