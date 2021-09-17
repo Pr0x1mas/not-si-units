@@ -6,6 +6,6 @@ si: Volt
 siUnit: V
 name: Britain
 unit: B
-urlName: Britain
+urlName: units/Britain
 ratio: undefined
 ---
