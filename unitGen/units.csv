@@ -15,7 +15,7 @@ Magnetic_Flux,Weber,Wb
 Magnetic_Flux_Density,Tesla,T
 Inductance,Henry,H
 Temperature,Degree_Celcius,°C,Degree_Duff,°D
-Luminous_Flux,lm
+Luminous_Flux,Lumen,lm
 Illuminance,Lux,lx
 Radioactivity,Becquerel,Bq,Miss_Ross's_Room,Y6
 Absorbed_Dose,Gray,Gy,Uno,U

@@ -1,11 +1,11 @@
 ---
 layout: unit
 base: false
-measurement: Steradians
-si: Steradian
-siUnit: sr
+measurement: Illuminance
+si: Lux
+siUnit: lx
 name: undefined
 unit: undefined
-urlName: undefined
+urlName: units/undefined
 ratio: undefined
 ---
