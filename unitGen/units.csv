@@ -13,7 +13,7 @@ Resistance,Ohm,Ω,Fork,🍴
 Electrical_Conductance,Siemens,S
 Magnetic_Flux,Weber,Wb
 Magnetic_Flux_Density,Tesla,T
-Inductance,Henry,H
+Inductance,Henry,H,Dyson,d
 Temperature,Degree_Celcius,°C,Degree_Duff,°D
 Luminous_Flux,Lumen,lm
 Illuminance,Lux,lx
