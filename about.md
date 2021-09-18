@@ -16,3 +16,6 @@ Each base unit has a ratio which shows how it can be converted from SI, e.g Unco
 
 ## Why the name?
 Nacia Netradicia is Esperanto for "national unconventional", intended to be the exact opposite of the translation of SI: "international standard".
+
+## How it works (technical details)
+All units are stored in two files - [base.csv](https://github.com/Pr0x1mas/not-si-units/blob/main/unitGen/base.csv) (base units) and [units.csv](https://github.com/Pr0x1mas/not-si-units/blob/main/unitGen/units.csv) (other named units). A [python script](https://github.com/Pr0x1mas/not-si-units/blob/main/unitGen/generate_units.py) is then used to take the data in the csv files and generate markdown files for each one. These markdown files are placed in the '_units' folder. Through the use of liquid collections, the tables on the home page are populated with each unit. I previously used js to load directly from the CSV, however this lead to compatibility issues on older browsers and just didn't make sense when I could have it served as static HTML. This means that it is entirely possible to view this site on [Nintendo 3DS](https://i.imgur.com/vfLJN0Q.png).
