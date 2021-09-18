@@ -10,14 +10,4 @@ urlName: units/Rimmer
 ratio: 338.15
 ---
 
-My computer science teacher has an obsession with aardvarks and they are also the first animal in the alphabet, so it felt fitting to include one somewhere.
-
-It apparently took a fair bit of effort to work out how many moles of carbon are in an aardvark, I did not do it myself as my chemistry abilities are questionable at best.
-
-<img style="width: 200px" src="/assets/aardvarkconvo.png">
-<img style="width: 400px" src="/assets/aardvark.webp">this
-is
-an aardvark
-this
-is
-an aardvark
+I'm told this is a red dwarf reference in relation to something called 'Gazpacho soup'. Since according to google, the best temperature of soup is {{ page.ratio | minus: 273.15 }}°C which then converted to kelvin is {{page.ratio}}°K, making that a rimmer.

@@ -1,13 +1,13 @@
 <header style="position: fixed; width: 100%;" class="Header">
-    <img height="32	" src="{{site.baseurl}}{% link assets/NNicon.png %}">
+    <img height="32	" src="{{ 'assets/NNicon.png' | relative_url }}">
     <div class="Header-item" class="Header-item">
         <span style="font-weight: bolder;">Nacia Netradicia</span>
     </div>
     <div class="Header-item">
-        <a href="{{site.baseurl}}" class="Header-link">Home</a>
+        <a href="{{'/' | relative_url }}" class="Header-link">Home</a>
     </div>
     <div class="Header-item">
-        <a href="{{site.baseurl}}/about" class="Header-link">About</a>
+        <a href="{{'/about' | relative_url }}" class="Header-link">About</a>
     </div>
 </header>
 <div style="height: 53px;"></div>

@@ -6,12 +6,12 @@ import os
 print(os.getcwd())
 
 with open('unitGen/base.csv', encoding="utf8") as base:
-    oldUnitContent = ""
     baseReader = csv.reader(base, delimiter=",")
     for row in baseReader:
         row += ['undefined'] * (6 - len(row))
         print(row)
         newUnitFileName = "_units/" + row[3] + ".md"
+        oldUnitContent = ""
         if os.path.isfile(newUnitFileName):
             with open(newUnitFileName, "r", encoding="utf8") as oldUnit:
                 frontMatterCount = 0
@@ -40,18 +40,21 @@ with open('unitGen/base.csv', encoding="utf8") as base:
             newUnit.write("ratio: " + row[5].replace("_", " ") + "\n")
 
             newUnit.write("---\n")
-            newUnit.write(oldUnitContent)
+            try:
+                newUnit.write(oldUnitContent)
+            except Exception:
+                pass
         newUnit.close()
 
 base.close()
 
 with open('unitGen/units.csv', encoding="utf8") as units:
-    oldUnitContent = ""
     unitsReader = csv.reader(units, delimiter=",")
     for row in unitsReader:
         row += ['undefined'] * (6 - len(row))
         print(row)
         newUnitFileName = "_units/" + row[3] + ".md"
+        oldUnitContent = ""
         if os.path.isfile(newUnitFileName):
             with open(newUnitFileName, "r", encoding="utf8") as oldUnit:
                 frontMatterCount = 0
