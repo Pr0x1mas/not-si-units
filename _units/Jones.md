@@ -7,5 +7,5 @@ siUnit: C
 name: Jones
 unit: J
 urlName: units/Jones
-ratio: undefined
+ratio: 0.088
 ---

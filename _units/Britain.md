@@ -7,5 +7,5 @@ siUnit: V
 name: Britain
 unit: B
 urlName: units/Britain
-ratio: undefined
+ratio: 0.0008431068181818183
 ---

@@ -7,5 +7,5 @@ siUnit: J
 name: Goureau
 unit: g
 urlName: units/Goureau
-ratio: undefined
+ratio: 7.41934e-05
 ---

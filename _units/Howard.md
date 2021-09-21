@@ -7,5 +7,5 @@ siUnit: F
 name: Howard
 unit: H
 urlName: units/Howard
-ratio: undefined
+ratio: 104.37586092563488
 ---

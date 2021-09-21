@@ -5,7 +5,7 @@ measurement: Inductance
 si: Henry
 siUnit: H
 name: Dyson
-unit: D
+unit: d
 urlName: units/Dyson
-ratio: undefined
+ratio: 0.15329214876033062
 ---

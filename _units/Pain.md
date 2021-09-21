@@ -7,5 +7,5 @@ siUnit: hz
 name: Pain
 unit: Aa
 urlName: units/Pain
-ratio: undefined
+ratio: 0.25
 ---
