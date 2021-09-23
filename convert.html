@@ -1,0 +1,35 @@
+---
+title: Convert
+permalink: /convert/
+layout: default
+---
+
+<h1 class="h1">Convert Units</h1>
+<p>
+    If you are too lazy to do the maths, you can easily swap between NN and SI with our handy converter.
+    <br>
+    I am aware the numbers are unpleasant, but this is what happens when you use arbitrary numbers.
+</p>
+
+<h2 class="h2">I want to convert
+
+    <select id="unit-conversion-selector" onchange="setConvertors()" class="form-select" aria-label="Unit to convert">
+        {% for unit in site.units %}
+            <option data-measurement="{{unit.measurement}}" data-si="{{unit.si}}" data-siUnit="{{unit.siUnit}}" data-equivalent="{{unit.name}}" data-equivalentUnit="{{unit.unit}}" data-ratio="{{unit.ratio}}" value="{{unit.measurement}}">
+                {{ unit.measurement }}
+            </option>
+        {% endfor %}
+    </select>
+</h2>
+
+<br>
+
+<p>
+    <input style="min-width: 100px" onchange="convertUnitsIn()" style="width: auto;" id="unit-in" class="form-control" type="number" />
+    <span id="unit-in-label"></span>
+    = 
+    <input style="min-width: 100px" onchange="convertUnitsOut()" id="unit-out" class="form-control" type="number" />
+    <span id="unit-out-label"></span>
+
+</p>
+<script src="{{'js/convertor.js' | relative_url }}"></script>
