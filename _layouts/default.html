@@ -6,6 +6,11 @@
         {%- include navbar.html -%}
 
         <section class="p-6">
+            
+            <noscript>
+                <div class="flash mt-3 flash-warn">{% octicon alert height:16 %} JavaScript is not supported or enabled in your browser. Some content may not work correctly</div>
+                <br>
+            </noscript>
             {{ content }}
         </section>
 
