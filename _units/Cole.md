@@ -7,5 +7,5 @@ siUnit: rad
 name: Cole
 unit: c
 urlName: units/Cole
-ratio: undefined
+ratio: 1.0
 ---

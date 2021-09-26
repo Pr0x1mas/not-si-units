@@ -1,6 +1,6 @@
 measurement,si,siUnit,equivalent,equivalentUnit,formula
-Angle,Radian,rad,Cole,c,¯\_(ツ)_/¯
-Solid_Angle_Measure,Steradian,sr,Coleslaw,cs,¯\_(ツ)_/¯
+Angle,Radian,rad,Cole,c,s*(s**-1)
+Solid_Angle_Measure,Steradian,sr,Coleslaw,cs,(s**2)*(s**-2)
 Frequency,Hertz,hz,Pain,Aa,s**-1
 Force,Newton,N,McGhee,mg,m*kg*(s**-2)
 Pressure,Pascal,Pa,Freddie_Mercury,Fm,(m**-1)*kg*(s**-2)
