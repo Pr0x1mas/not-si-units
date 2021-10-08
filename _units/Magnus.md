@@ -7,5 +7,5 @@ siUnit: W
 name: Magnus
 unit: M
 urlName: units/Magnus
-ratio: 1.854835e-05
+ratio: 5.680432187500001e-05
 ---

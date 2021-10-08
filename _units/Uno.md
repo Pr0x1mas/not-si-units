@@ -7,5 +7,5 @@ siUnit: Gy
 name: Uno
 unit: U
 urlName: units/Uno
-ratio: 0.00016129
+ratio: 0.000493950625
 ---

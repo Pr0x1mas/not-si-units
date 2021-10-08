@@ -7,5 +7,5 @@ siUnit: H
 name: Dyson
 unit: d
 urlName: units/Dyson
-ratio: 0.15329214876033062
+ratio: 0.46945720557851256
 ---

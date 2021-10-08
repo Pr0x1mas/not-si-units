@@ -7,5 +7,5 @@ siUnit: Ω
 name: Fork
 unit: 🍴
 urlName: units/Fork
-ratio: 0.038323037190082655
+ratio: 0.11736430139462814
 ---
