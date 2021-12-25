@@ -9,3 +9,5 @@ unit: M
 urlName: units/Magnus
 ratio: 5.680432187500001e-05
 ---
+
+Magnus is a powerful bloke.

@@ -1,11 +1,13 @@
 ---
 layout: unit
 base: false
-measurement: Illuminance
-si: Lux
-siUnit: lx
+measurement: undefined
+si: undefined
+siUnit: undefined
 name: undefined
 unit: undefined
 urlName: units/undefined
 ratio: undefined
 ---
+
+Some units aren't units at all.
