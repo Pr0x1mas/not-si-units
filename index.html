@@ -24,7 +24,7 @@ title: Home
         <th>Measurement</th>
         <th>SI Base Unit</th>
         <th>Equivalent</th>
-        <th>Ratio</th>
+        <th>Ratio<span style="opacity: 5%"> + L</span></th>
     </tr>
     {% for unit in site.units %}
         {% if unit.base %}
@@ -54,7 +54,7 @@ title: Home
         <th>Measurement</th>
         <th>SI Unit</th>
         <th>Equivalent</th>
-        <th>Ratio</th>
+        <th>Ratio<span style="opacity: 5%"> + L</span></th>
     </tr>
     {% for unit in site.units %}
         {% unless unit.base %}
