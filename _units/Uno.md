@@ -11,4 +11,4 @@ ratio: 0.000493950625
 ---
 
 Another dose pun, this is based on the fact that DOS is the sequel to Uno you'd think was a ripoff if it weren't also published by Mattel.
-![DOS, a rather confusing card game](/assets/dos.png)
+![DOS, a rather confusing card game]({{ '/assets/dos.png' | relative_url}})

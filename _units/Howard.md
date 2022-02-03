@@ -10,4 +10,4 @@ urlName: units/Howard
 ratio: 34.081913771635875
 ---
 
-!["I'll be the farad please" >"farad it is"](/assets/faradconvo.png)
+!["I'll be the farad please" >"farad it is"]({{ '/assets/faradconvo.png' | relative_url }})
