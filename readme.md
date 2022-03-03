@@ -6,6 +6,8 @@ permalink: /about/
 
 # About
 
+You can also read the [blog post](https://jbritain.github.io/2021/10/31/si-units-are-boring-lets-replace-them.html) I wrote about this.
+
 ## Where it came from
 The question was simple: why do we have to use SI units? What's to stop us using our own units?
 
