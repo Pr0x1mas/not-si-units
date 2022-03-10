@@ -10,4 +10,4 @@ urlName: units/Miss_Ross's_Room
 ratio: 0.25
 ---
 
-Howard found an alpha particle in Miss Ross's room so it makes sense to use it as a unit for radioactivity.
+We found an alpha particle in Miss Ross's room so it makes sense to use it as a unit for radioactivity.
