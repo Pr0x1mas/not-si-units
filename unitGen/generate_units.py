@@ -1,4 +1,4 @@
-# REGENERATES UNITS FROM CSV FILES, LIQUID REPLACES JS TO MAKE UNITS STATIC
+# REGENERATES UNITS FROM CSV FILES
 
 import csv
 import os
@@ -9,7 +9,7 @@ print(os.getcwd())
 
 def getRatio(formula): # do I need a function for this? Probably not but I anticipated this being more complicated
     try:
-        return(str(eval(formula))) ## literally just parse the formula as code and it works itself out :pog:
+        return(str(eval(formula))) # literally just parse the formula as code and it works itself out :pog:
     except Exception as e: # if there is no formula to derive it such as radians. Should have just put 'None' but I like my shruggies
         print("cannot determine ratio from " + row[1])
         print("ERROR: " + str(e) + " on unit " + row[1])
@@ -31,7 +31,7 @@ with open('unitGen/base.csv', encoding="utf8") as base:
                     if frontMatterCount == 2 and not '---' in line: # store content
                         oldUnitContent += line
             oldUnit.close()
-            os.remove(newUnitFileName) # delete file
+            os.remove(newUnitFileName) # delete old file
 
 
 
@@ -53,7 +53,7 @@ with open('unitGen/base.csv', encoding="utf8") as base:
             newUnit.write("---\n")
 
             try:
-                exec(row[2] + " = float('" + row[5] + "')") # yes I'm using exec(), fuck you. This creates variables for each base unit so I can calculate ratios later on
+                exec(row[2] + " = float('" + row[5] + "')") # yes I'm using exec(), cry about it. This creates variables for each base unit so I can calculate ratios later on
             except Exception as e:
                 print("ERROR: " + str(e) + " on unit " + row[1])
 
