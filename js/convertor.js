@@ -10,14 +10,20 @@ function setConvertors(){
     unitOut.placeholder = unit.dataset.equivalent + "s go here";
     unitInLabel.innerHTML = unit.dataset.si + "s"
     unitOutLabel.innerHTML = unit.dataset.equivalent + "s"
+
+    if (unitIn.value != ""){
+        convertUnitsIn()
+    } else if (unitOut.value != ""){
+        convertUnitsOut()
+    }
 }
 
 function convertUnitsIn(){
-    unitOut.value = unitIn.value * unit.dataset.ratio
+    unitOut.value = unitIn.value / unit.dataset.ratio
 }
 
 function convertUnitsOut(){
-    unitIn.value = unitIn.value * unit.dataset.ratio
+    unitIn.value = unitOut.value * unit.dataset.ratio
 }
 
 setConvertors();
